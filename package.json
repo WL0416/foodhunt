@@ -2,6 +2,7 @@
   "name": "foodhunt",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://wl0416.github.io/foodhunt",
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "^4.3.1",
@@ -19,7 +20,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "npm run build && gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"

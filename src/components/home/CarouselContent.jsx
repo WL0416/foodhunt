@@ -3,7 +3,7 @@ import "./CarouselContent.css";
 import PropTypes from "prop-types";
 
 const CarouselContent = props => {
-  const { information, slide, altmessage } = props;
+  const { information } = props;
   return (
     <div className="carousel-caption">
       <h1>{information}</h1>
