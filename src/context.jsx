@@ -10,7 +10,7 @@ class Provider extends Component {
 
   async componentDidMount() {
     const res = await axios.get(
-      "https://my-json-server.typicode.com/wl0416/JSONapi/db/"
+      "https://my-json-server.typicode.com/wl0416/JSONapi/vendors/"
     );
 
     this.setState({ vendors: res.data });

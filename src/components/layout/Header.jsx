@@ -7,7 +7,7 @@ import logo from "../../images/logo.png";
 const Header = props => {
   const { branding } = props;
   return (
-    <nav className="navbar navbar-expand-sm navbar-dark bg-danger mb-3 py-0">
+    <nav className="navbar navbar-expand-sm navbar-dark bg-danger mb-1 py-0">
       <div className="container">
         <a href="/" className="navbar-brand">
           <img src={logo} width="75" height="75" alt="" />

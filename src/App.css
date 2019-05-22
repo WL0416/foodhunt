@@ -1,0 +1,11 @@
+.bg-danger,
+.danger-color,
+.btn-danger {
+  background-color: #e76f51 !important;
+  border-color: #e76f51 !important;
+}
+
+.container-fluid {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}

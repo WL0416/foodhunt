@@ -14,7 +14,7 @@ class App extends Component {
         <Router>
           <div className="App">
             <Header branding="Food Hunt" />
-            <div className="container">
+            <div className="container-fluid">
               <Switch>
                 <Route exact path="/" component={Home} />
               </Switch>
