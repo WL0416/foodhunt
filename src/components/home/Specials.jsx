@@ -1,13 +1,14 @@
 import React, { Component } from "react";
-import { Button, Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import { List } from "semantic-ui-react";
+import Special from "./Special";
+import { Consumer } from "../../context";
 
 class SpecialPrice extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      weekday: "",
-      specials: []
+      weekday: ""
     };
   }
 
@@ -26,31 +27,33 @@ class SpecialPrice extends Component {
     const { weekday } = this.state;
 
     return (
-      <Container>
-        <Row>
-          <Col>
-            <h5>RECENTLY ADDED {weekday} SPECIALS</h5>
-            <List selection verticalAlign="middle">
-              <List.Item>
-                <List.Content>
-                  <List.Header>test1</List.Header>
-                </List.Content>
-              </List.Item>
-              <List.Item>
-                <List.Content>
-                  <List.Header>test2</List.Header>
-                </List.Content>
-              </List.Item>
-              <List.Item>
-                <List.Content>
-                  <List.Header>test3</List.Header>
-                </List.Content>
-              </List.Item>
-            </List>
-          </Col>
-          <Col />
-        </Row>
-      </Container>
+      <Consumer>
+        {value => {
+          const { specialsPrice } = value;
+          return (
+            <Container>
+              <Row>
+                <Col>
+                  <h5>RECENTLY ADDED {weekday} SPECIALS</h5>
+                  <List selection verticalAlign="middle">
+                    {specialsPrice.map(special => (
+                      <Special key={special.id} special={special} />
+                    ))}
+                  </List>
+                </Col>
+                <Col>
+                  <h5>TOP RATE SPECIALS</h5>
+                  <List selection verticalAlign="middle">
+                    {specialsPrice.map(special => (
+                      <Special key={special.id} special={special} />
+                    ))}
+                  </List>
+                </Col>
+              </Row>
+            </Container>
+          );
+        }}
+      </Consumer>
     );
   }
 }

@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const Footer = props => {
   const { copyright } = props;
   return (
-    <footer className="page-footer font-small danger-color pt-4">
+    <footer className="page-footer font-small danger-color pt-4 mt-5">
       <div className="container-fluid text-center text-md-left">
         <div className="row">
           <div className="col-md-6 mt-md-0 mt-3">
