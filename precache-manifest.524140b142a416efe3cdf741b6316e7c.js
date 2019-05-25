@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c2c3c9e38e01118ac1bed43629c38c10",
+    "revision": "f6fe25a76c496b66888b682f4ec5e13a",
     "url": "/foodhunt/index.html"
   },
   {
-    "revision": "3c059cf974c882c767db",
-    "url": "/foodhunt/static/css/2.4e5c3c81.chunk.css"
+    "revision": "ccea80d42abfc9251853",
+    "url": "/foodhunt/static/css/2.9d441c58.chunk.css"
   },
   {
-    "revision": "c953c01b52652841a4a6",
-    "url": "/foodhunt/static/css/main.d0abc467.chunk.css"
+    "revision": "db9443d038f7f5a4150a",
+    "url": "/foodhunt/static/css/main.8cbc6b4e.chunk.css"
   },
   {
-    "revision": "3c059cf974c882c767db",
-    "url": "/foodhunt/static/js/2.09100103.chunk.js"
+    "revision": "ccea80d42abfc9251853",
+    "url": "/foodhunt/static/js/2.f52b4314.chunk.js"
   },
   {
-    "revision": "c953c01b52652841a4a6",
-    "url": "/foodhunt/static/js/main.d2226bbd.chunk.js"
+    "revision": "db9443d038f7f5a4150a",
+    "url": "/foodhunt/static/js/main.a4a89a76.chunk.js"
   },
   {
     "revision": "f35d8da0b5c86d0e9869",
