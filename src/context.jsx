@@ -13,6 +13,7 @@ class Provider extends Component {
       "https://my-json-server.typicode.com/wl0416/JSONapi/vendors/"
     );
 
+    console.log(res.data);
     this.setState({ vendors: res.data });
   }
 
