@@ -4,7 +4,7 @@ import { List } from "semantic-ui-react";
 import Special from "./Special";
 import { Consumer } from "../../context";
 
-class SpecialPrice extends Component {
+class Specials extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -58,4 +58,4 @@ class SpecialPrice extends Component {
   }
 }
 
-export default SpecialPrice;
+export default Specials;
