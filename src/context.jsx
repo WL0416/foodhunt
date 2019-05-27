@@ -5,15 +5,35 @@ const Context = React.createContext();
 
 class Provider extends Component {
   state = {
-    vendors: []
+    specials: [],
+    specialsPrice: [],
+    specialsRate: []
   };
 
   async componentDidMount() {
     const res = await axios.get(
-      "https://my-json-server.typicode.com/wl0416/JSONapi/vendors/"
+      "https://my-json-server.typicode.com/wl0416/JSONapi/specials/"
     );
 
-    this.setState({ vendors: res.data });
+    const specials = res.data;
+
+    console.log(specials);
+
+    const specialsPrice = specials.sort(function(a, b) {
+      return a.date - b.date;
+    });
+    console.log(specialsPrice.reverse());
+
+    const specialsRate = specials.sort(function(a, b) {
+      return a.rate - b.rate;
+    });
+    console.log(specialsRate);
+
+    this.setState({
+      specials: res.data,
+      specialsPrice: specialsPrice,
+      specialsRate: specialsRate
+    });
   }
 
   render() {

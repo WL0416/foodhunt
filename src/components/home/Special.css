@@ -1,0 +1,21 @@
+.specialcol {
+  background-color: #ffded5;
+  text-align: center;
+}
+
+.col-md-2 .content {
+  padding: 20% 0;
+}
+
+a.speciala {
+  text-decoration: none !important;
+  color: black;
+}
+
+a .item {
+  margin: 10px 0;
+}
+
+a .item:hover {
+  background: #ffded5;
+}
