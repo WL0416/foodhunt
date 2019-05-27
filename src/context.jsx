@@ -27,7 +27,7 @@ class Provider extends Component {
     const specialsRate = specials.sort(function(a, b) {
       return a.rate - b.rate;
     });
-    console.log(specialsRate);
+    console.log(specialsRate.reverse());
 
     this.setState({
       specials: res.data,

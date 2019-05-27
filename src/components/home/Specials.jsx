@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { List } from "semantic-ui-react";
-import Special from "./Special";
+import Special, {Rate} from "./Special";
 import { Consumer } from "../../context";
 
 class Specials extends Component {
@@ -29,7 +29,7 @@ class Specials extends Component {
     return (
       <Consumer>
         {value => {
-          const { specialsPrice } = value;
+          const { specialsPrice, specialsRate } = value;
           return (
             <Container>
               <Row>
@@ -44,8 +44,8 @@ class Specials extends Component {
                 <Col>
                   <h5>TOP RATE SPECIALS</h5>
                   <List selection verticalAlign="middle">
-                    {specialsPrice.map(special => (
-                      <Special key={special.id} special={special} />
+                    {specialsRate.map(special => (
+                      <Rate key={special.id} special={special} />
                     ))}
                   </List>
                 </Col>

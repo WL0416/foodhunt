@@ -19,3 +19,8 @@ a .item {
 a .item:hover {
   background: #ffded5;
 }
+
+.star {
+  width: 20px;
+  transform: translateY(-2px);
+}
