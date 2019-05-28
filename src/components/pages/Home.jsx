@@ -4,6 +4,7 @@ import React from "react";
 import Carousel from "../home/Carousel";
 import Search from "../home/Search";
 import Specials from "../home/Specials";
+import Categories from "../home/Categories";
 
 const Home = props => {
   return (
@@ -11,6 +12,7 @@ const Home = props => {
       <Carousel />
       <Search />
       <Specials />
+      <Categories />
     </span>
   );
 };

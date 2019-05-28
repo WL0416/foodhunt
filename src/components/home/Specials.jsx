@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { List } from "semantic-ui-react";
-import Special, {Rate} from "./Special";
+import Special, { Rate } from "./Special";
 import { Consumer } from "../../context";
 
 class Specials extends Component {
@@ -31,26 +31,32 @@ class Specials extends Component {
         {value => {
           const { specialsPrice, specialsRate } = value;
           return (
-            <Container>
-              <Row>
-                <Col>
-                  <h5>RECENTLY ADDED {weekday} SPECIALS</h5>
-                  <List selection verticalAlign="middle">
-                    {specialsPrice.map(special => (
-                      <Special key={special.id} special={special} />
-                    ))}
-                  </List>
-                </Col>
-                <Col>
-                  <h5>TOP RATE SPECIALS</h5>
-                  <List selection verticalAlign="middle">
-                    {specialsRate.map(special => (
-                      <Rate key={special.id} special={special} />
-                    ))}
-                  </List>
-                </Col>
-              </Row>
-            </Container>
+            <div className="rate-block">
+              <Container>
+                <Row>
+                  <Col>
+                    <h5 className="block-title">
+                      <strong>RECENTLY ADDED {weekday} SPECIALS</strong>
+                    </h5>
+                    <List selection verticalAlign="middle">
+                      {specialsPrice.map(special => (
+                        <Special key={special.id} special={special} />
+                      ))}
+                    </List>
+                  </Col>
+                  <Col>
+                    <h5 className="block-title">
+                      <strong>TOP RATE SPECIALS</strong>
+                    </h5>
+                    <List selection verticalAlign="middle">
+                      {specialsRate.map(special => (
+                        <Rate key={special.id} special={special} />
+                      ))}
+                    </List>
+                  </Col>
+                </Row>
+              </Container>
+            </div>
           );
         }}
       </Consumer>

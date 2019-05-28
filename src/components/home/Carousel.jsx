@@ -1,7 +1,8 @@
 import React from "react";
-import slide1 from "../../images/slide1.jpg";
+// import slide1 from "../../images/slide1.jpg";
 import slide2 from "../../images/slide2.jpg";
 import slide3 from "../../images/slide3.jpg";
+import video1 from "../../images/v-lg.webm";
 import "./Carousel.css";
 import Contents from "./CarouselContent";
 
@@ -11,6 +12,7 @@ export default props => {
       id="carouselExampleIndicators"
       className="carousel slide"
       data-ride="carousel"
+      data-interval="false"
     >
       <ol className="carousel-indicators">
         <li
@@ -21,12 +23,20 @@ export default props => {
         <li data-target="#carouselExampleIndicators" data-slide-to="1" />
         <li data-target="#carouselExampleIndicators" data-slide-to="2" />
       </ol>
-      <div className="carousel-inner">
+      <div className="carousel-inner" role="listbox">
         <div className="carousel-item active">
           <div className="image">
-            <img src={slide1} alt="First Slide" className="d-block w-100" />
+            <video
+              className="slide-video"
+              src={video1}
+              width="100%"
+              hight="500"
+              type="video/webm"
+              autoplay="true"
+              loop="true"
+            />
           </div>
-          <Contents information="Street Food Arriving!" />
+          <Contents information="" />
         </div>
         <div className="carousel-item">
           <div className="image">
