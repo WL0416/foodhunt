@@ -1,10 +1,9 @@
 import React from "react";
-// import slide1 from "../../images/slide1.jpg";
-import slide2 from "../../images/slide2.jpg";
-import slide3 from "../../images/slide3.jpg";
-import video1 from "../../images/v-lg.webm";
+import slide1 from "../../images/slide1.jpg";
+import video from "../../images/video.mp4";
 import "./Carousel.css";
 import Contents from "./CarouselContent";
+import { Image } from "react-bootstrap";
 
 export default props => {
   return (
@@ -14,44 +13,37 @@ export default props => {
       data-ride="carousel"
       data-interval="false"
     >
-      <ol className="carousel-indicators">
+      {/* <ol className="carousel-indicators">
         <li
           data-target="#carouselExampleIndicators"
           data-slide-to="0"
           className="active"
         />
         <li data-target="#carouselExampleIndicators" data-slide-to="1" />
-        <li data-target="#carouselExampleIndicators" data-slide-to="2" />
-      </ol>
+      </ol> */}
       <div className="carousel-inner" role="listbox">
         <div className="carousel-item active">
-          <div className="image">
+          <span className="video">
             <video
               className="slide-video"
-              src={video1}
+              src={video}
               width="100%"
-              hight="500"
-              type="video/webm"
+              hight="auto"
+              type="video/mp4"
               autoplay="true"
               loop="true"
             />
-          </div>
+          </span>
           <Contents information="" />
         </div>
         <div className="carousel-item">
-          <div className="image">
-            <img src={slide2} alt="Second Slide" className="d-block w-100" />
-          </div>
+          <span className="image">
+            <Image src={slide1} fluid />
+          </span>
           <Contents information="Free Indian Food!" />
         </div>
-        <div className="carousel-item">
-          <div className="image">
-            <img src={slide3} alt="Third Slide" className="d-block w-100" />
-          </div>
-          <Contents information="Free Food Again!!!" />
-        </div>
       </div>
-      <a
+      {/* <a
         className="carousel-control-prev"
         href="#carouselExampleIndicators"
         role="button"
@@ -68,7 +60,7 @@ export default props => {
       >
         <span className="carousel-control-next-icon" aria-hidden="true" />
         <span className="sr-only">Next</span>
-      </a>
+      </a> */}
     </div>
   );
 };
