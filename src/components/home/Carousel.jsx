@@ -34,7 +34,7 @@ export default props => {
               loop="true"
             />
           </span>
-          <Contents information="" />
+          <Contents information="Start Your Food Journey" />
         </div>
         <div className="carousel-item">
           <span className="image">
