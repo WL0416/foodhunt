@@ -1,9 +1,50 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { Consumer } from "../../context";
+import Category from "./Category";
+import "./Categories.css";
 
 class Categories extends Component {
   render() {
+    const weekdays = [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ];
+    const listWeekdays = weekdays.map(weekday => (
+      <Category category={weekday} quantity="0" />
+    ));
+
+    const continents = [
+      "Australia",
+      "Asia",
+      "Africa",
+      "Europe",
+      "North America",
+      "South America",
+      "Antarctica"
+    ];
+    const listContinents = continents.map(continent => (
+      <Category category={continent} quantity="0" />
+    ));
+
+    const types = [
+      "Parma",
+      "Pizza",
+      "Noddle",
+      "Steak",
+      "Burger",
+      "Pie",
+      "Fish and Chips"
+    ];
+    const listTypes = types.map(type => (
+      <Category category={type} quantity="0" />
+    ));
+
     return (
       <Consumer>
         {value => {
@@ -11,37 +52,17 @@ class Categories extends Component {
           return (
             <Container>
               <Row>
-                <Col>
+                <Col className="cate-col">
                   <h5 className="cate-title">Weekdays</h5>
-                  <ul className="cate-list">
-                    <li>
-                      <a href="/">Monday(0)</a>
-                    </li>
-                    <li>
-                      <a href="/">Tuesdy(0)</a>
-                    </li>
-                    <li>
-                      <a href="/">Wednesday(0)</a>
-                    </li>
-                    <li>
-                      <a href="/">Thursday(0)</a>
-                    </li>
-                    <li>
-                      <a href="/">Friday(0)</a>
-                    </li>
-                    <li>
-                      <a href="/">Saturday(0)</a>
-                    </li>
-                    <li>
-                      <a href="/">Sunday(0)</a>
-                    </li>
-                  </ul>
+                  {listWeekdays}
                 </Col>
-                <Col>
-                  <h5 className="block-title">Countries</h5>
+                <Col className="cate-col">
+                  <h5 className="cate-title">Continents</h5>
+                  {listContinents}
                 </Col>
-                <Col>
-                  <h5 className="block-title">Types</h5>
+                <Col className="cate-col">
+                  <h5 className="cate-title">Types</h5>
+                  {listTypes}
                 </Col>
               </Row>
             </Container>

@@ -1,0 +1,41 @@
+.cate-col {
+  box-shadow: 0 1px 1px #ccc;
+  margin: 5% 1% 0 1%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.cate-title {
+  text-align: center;
+  margin-top: 5%;
+}
+
+.cate-item {
+  text-align: center;
+  padding: 5% 0;
+}
+
+.cate-item:hover {
+  background: rgba(204, 204, 204, 0.5);
+}
+
+.cate-a:link {
+  text-decoration: none;
+  color: black;
+}
+
+.cate-a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.cate-a:hover {
+  text-decoration: none;
+  color: #e76f51;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.cate-a:active {
+  text-decoration: none;
+  color: #e76f51;
+}

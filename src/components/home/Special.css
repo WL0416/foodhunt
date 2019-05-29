@@ -17,7 +17,7 @@ a .item {
 }
 
 a .item:hover {
-  background: #e76f51;
+  background-color: rgba(231, 111, 81, 0.5);
 }
 
 .star {

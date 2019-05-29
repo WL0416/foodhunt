@@ -7,7 +7,16 @@ class Provider extends Component {
   state = {
     specials: [],
     specialsPrice: [],
-    specialsRate: []
+    specialsRate: [],
+    weekinfo: {
+      monday: 0,
+      tuesday: 0,
+      wednesday: 0,
+      thursday: 0,
+      friday: 0,
+      saturday: 0,
+      sunday: 0
+    }
   };
 
   async componentDidMount() {
