@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.0/workbox-sw.js");
 
 importScripts(
-  "/foodhunt/precache-manifest.81884e0c926d0d9adab154cbbf076784.js"
+  "/foodhunt/precache-manifest.97499df427845ce226072cdcda31b149.js"
 );
 
 self.addEventListener('message', (event) => {
