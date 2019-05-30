@@ -30,9 +30,9 @@ export default props => {
               hight="auto"
               autoplay="true"
               loop="true"
-            >
-              <source src={video} type="video/webm" />
-            </video>
+              src={video}
+              type="video/webm"
+            />
           </span>
           <Contents information="Start Your Food Journey" />
         </div>
