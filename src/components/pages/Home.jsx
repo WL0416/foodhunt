@@ -5,12 +5,15 @@ import Carousel from "../home/Carousel";
 import Search from "../home/Search";
 import Specials from "../home/Specials";
 import Categories from "../home/Categories";
+import ScrollableAnchor from "react-scrollable-anchor";
 
 const Home = props => {
   return (
     <span>
       <Carousel />
-      <Search />
+      <ScrollableAnchor id={"search-section"}>
+        <Search />
+      </ScrollableAnchor>
       <Specials />
       <Categories />
     </span>

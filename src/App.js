@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Provider from "./context";
@@ -18,7 +18,7 @@ class App extends Component {
             <div className="container-fluid">
               <Switch>
                 <Route exact path="/" component={Home} />
-                <Route exact path="./AddSpecial" component={AddSpecial} />
+                <Route exact path="/AddSpecial" component={AddSpecial} />
               </Switch>
             </div>
             <Footer />

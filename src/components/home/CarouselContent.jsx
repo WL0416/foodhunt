@@ -1,6 +1,7 @@
 import React from "react";
 import "./CarouselContent.css";
 import PropTypes from "prop-types";
+import { Button } from "react-bootstrap";
 
 const CarouselContent = props => {
   const { information } = props;
@@ -10,14 +11,14 @@ const CarouselContent = props => {
       <div className="row" style={{ paddingBottom: "13%" }}>
         <div className="col" />
         <div className="col">
-          <button type="button" className="btn-block btn-success">
+          <Button variant="success" size="lg" block>
             Get Info
-          </button>
+          </Button>
         </div>
         <div className="col">
-          <button type="button" className="btn-block btn-danger">
+          <Button variant="danger" size="lg" block href="#search-section">
             Hunt Now
-          </button>
+          </Button>
         </div>
         <div className="col" />
       </div>

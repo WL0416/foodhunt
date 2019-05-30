@@ -3,8 +3,7 @@ import React, { Component } from "react";
 class SearchBox extends Component {
   render() {
     return (
-      // <section className="search-banner py-3 form-arka-plan" id="search-banner">
-      <div className="container py-5 my-5" id="search-bar">
+      <div className="container py-5 my-5">
         <div className="row text-center pb-4">
           <div className="col-md-12">
             <h2 className="text-dark siyad-cerceve">
@@ -71,7 +70,6 @@ class SearchBox extends Component {
           </div>
         </div>
       </div>
-      // </section>
     );
   }
 }
