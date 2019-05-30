@@ -1,6 +1,6 @@
 import React from "react";
 import slide1 from "../../images/slide1.jpg";
-import video from "../../images/video.webm";
+import video from "../../images/video.mp4";
 import "./Carousel.css";
 import Contents from "./CarouselContent";
 import { Image } from "react-bootstrap";
@@ -31,7 +31,7 @@ export default props => {
               autoplay="true"
               loop="true"
               src={video}
-              type="video/webm"
+              type="video/mp4"
             />
           </span>
           <Contents information="Start Your Food Journey" />
