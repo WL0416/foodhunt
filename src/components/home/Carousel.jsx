@@ -28,11 +28,12 @@ export default props => {
               className="slide-video"
               width="100%"
               hight="auto"
+              controls=""
               autoplay="true"
               loop="true"
-              src={video}
-              type="video/mp4"
-            />
+            >
+              <source src={video} type="video/mp4" />
+            </video>
           </span>
           <Contents information="Start Your Food Journey" />
         </div>
