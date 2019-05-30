@@ -31,7 +31,7 @@ export default props => {
               autoplay="true"
               loop="true"
             >
-              <source src={video} type="video/mp4" />
+              <source src={video} type="video/webm" />
             </video>
           </span>
           <Contents information="Start Your Food Journey" />
