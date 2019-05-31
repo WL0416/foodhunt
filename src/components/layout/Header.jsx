@@ -22,12 +22,12 @@ const Header = props => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/" className="nav-link">
+              <Link to="/venues" className="nav-link">
                 VENUES
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/" className="nav-link">
+              <Link to="/addspecial" className="nav-link">
                 ADD SPECIAL
               </Link>
             </li>

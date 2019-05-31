@@ -7,7 +7,8 @@ import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import Home from "./components/pages/Home";
 import AddSpecial from "./components/pages/AddSpecial";
-import Overview from "./components/pages/Overview";
+import TodayOverview from "./components/pages/TodayOverview";
+import VenuesOverview from "./components/pages/VenuesOverview";
 
 class App extends Component {
   render() {
@@ -19,7 +20,8 @@ class App extends Component {
             <div className="container-fluid">
               <Switch>
                 <Route exact path="/" component={Home} />
-                <Route exact path="/today" component={Overview} />
+                <Route exact path="venues" component={VenuesOverview} />
+                <Route exact path="/today" component={TodayOverview} />
                 <Route exact path="/addspecial" component={AddSpecial} />
               </Switch>
             </div>

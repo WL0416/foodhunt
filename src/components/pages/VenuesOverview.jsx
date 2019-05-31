@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
-class Overview extends Component {
+class VenuesOverview extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      specials: []
+      venues: []
     };
   }
 
@@ -13,4 +13,4 @@ class Overview extends Component {
   }
 }
 
-export default Overview;
+export default VenuesOverview;
