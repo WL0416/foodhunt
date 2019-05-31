@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class AddSpecial extends Component {
+class Overview extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -9,8 +9,8 @@ class AddSpecial extends Component {
   }
 
   render() {
-    return <h1>Add Specials</h1>;
+    return <h1>Overview Page</h1>;
   }
 }
 
-export default AddSpecial;
+export default Overview;
