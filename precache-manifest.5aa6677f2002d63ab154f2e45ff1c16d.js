@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "519090ca1c2b5f05c8b14d230da140f0",
+    "revision": "7ebd92c841e03415bd3108e4601922cd",
     "url": "/foodhunt/index.html"
   },
   {
-    "revision": "82bf1670783c49ff493f",
+    "revision": "41d41daac30ec4aa56cb",
     "url": "/foodhunt/static/css/2.4e5c3c81.chunk.css"
   },
   {
-    "revision": "d1eb464ed747482789a0",
-    "url": "/foodhunt/static/css/main.059972c6.chunk.css"
+    "revision": "1ba8ffcd5a726eb6cc25",
+    "url": "/foodhunt/static/css/main.24bb90d2.chunk.css"
   },
   {
-    "revision": "82bf1670783c49ff493f",
-    "url": "/foodhunt/static/js/2.06de402a.chunk.js"
+    "revision": "41d41daac30ec4aa56cb",
+    "url": "/foodhunt/static/js/2.cdc7dbfd.chunk.js"
   },
   {
-    "revision": "d1eb464ed747482789a0",
-    "url": "/foodhunt/static/js/main.f34ff731.chunk.js"
+    "revision": "1ba8ffcd5a726eb6cc25",
+    "url": "/foodhunt/static/js/main.54c082d0.chunk.js"
   },
   {
     "revision": "f35d8da0b5c86d0e9869",
