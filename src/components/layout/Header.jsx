@@ -17,17 +17,17 @@ const Header = props => {
         <div>
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
-              <Link to="/Today" className="nav-link">
+              <Link to="/" className="nav-link">
                 TODAY
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/Venues" className="nav-link">
+              <Link to="/" className="nav-link">
                 VENUES
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/AddSpecial" className="nav-link">
+              <Link to="/" className="nav-link">
                 ADD SPECIAL
               </Link>
             </li>
