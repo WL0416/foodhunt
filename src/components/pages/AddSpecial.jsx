@@ -24,7 +24,7 @@ class AddSpecial extends Component {
     return (
       <Container>
         <Row>
-          <h1>Add a new special</h1>
+          <h1>Add a New Special</h1>
         </Row>
         <Row>
           <p>Feel free to submit a new special with the form below.</p>
