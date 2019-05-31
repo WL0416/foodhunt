@@ -6,8 +6,8 @@ import Provider from "./context";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import Home from "./components/pages/Home";
-import AddSpecial from "./components/pages/AddSpecial";
-import Overview from "./components/pages/Overview";
+// import AddSpecial from "./components/pages/AddSpecial";
+// import Overview from "./components/pages/Overview";
 
 class App extends Component {
   render() {
@@ -19,8 +19,8 @@ class App extends Component {
             <div className="container-fluid">
               <Switch>
                 <Route exact path="/" component={Home} />
-                <Route exact path="/today" component={Overview} />
-                <Route exact path="/addspecial" component={AddSpecial} />
+                {/* <Route exact path="/today" component={Overview} />
+                <Route exact path="/addspecial" component={AddSpecial} /> */}
               </Switch>
             </div>
             <Footer />
