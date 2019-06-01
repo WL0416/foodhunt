@@ -26,17 +26,13 @@ class Provider extends Component {
 
     const specials = res.data;
 
-    console.log(specials);
-
     const specialsPrice = specials.sort(function(a, b) {
       return a.date - b.date;
     });
-    console.log(specialsPrice.reverse());
 
     const specialsRate = specials.sort(function(a, b) {
       return a.rate - b.rate;
     });
-    console.log(specialsRate.reverse());
 
     this.setState({
       specials: res.data,
