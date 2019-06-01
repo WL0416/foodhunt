@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Row, Col, Form } from "react-bootstrap";
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
 
 class AddSpecial extends Component {
   constructor(props) {
@@ -20,7 +20,26 @@ class AddSpecial extends Component {
       "SUNDAY"
     ];
 
-    const types = [""];
+    const types = [
+      "PINTS",
+      "PARMA",
+      "PIZZA",
+      "STRAK",
+      "CURRY",
+      "BREAKFAST",
+      "BURGER",
+      "PIE",
+      "TRIVIA",
+      "FISH AND CHIPS",
+      "ROAST",
+      "JUGS",
+      "TACOS",
+      "HAPPY HOUR",
+      "POKER",
+      "COMEDY",
+      "LUNCH SPECIALS",
+      "BINGO"
+    ];
     return (
       <Container>
         <Row>
@@ -126,6 +145,51 @@ class AddSpecial extends Component {
               </Form.Group>
             </Form>
           </Col>
+        </Row>
+        <br />
+        <Row>
+          <Col>
+            <Form>
+              <Form.Group controlId="formGroupType">
+                <Form.Label>ADD TYPE</Form.Label>
+                <br />
+                {types.map(type => (
+                  <Form.Check
+                    inline
+                    type="checkbox"
+                    id={`${type}`}
+                    label={`${type}`}
+                  />
+                ))}
+              </Form.Group>
+            </Form>
+          </Col>
+        </Row>
+        <br />
+        <Row>
+          <Col>
+            <Form>
+              <Form.Group controlId="formGroupDescription">
+                <Form.Label>Description</Form.Label>
+                <Form.Control as="textarea" placeholder="TELL US ABOUT IT!" />
+              </Form.Group>
+            </Form>
+          </Col>
+        </Row>
+        <br />
+        <Row>
+          <Col />
+          <Col>
+            <Button
+              as="input"
+              type="submit"
+              value="SUBMIT"
+              variant="danger"
+              size="lg"
+              block
+            />
+          </Col>
+          <Col />
         </Row>
       </Container>
     );
