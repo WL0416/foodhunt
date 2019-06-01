@@ -9,14 +9,14 @@ import ScrollableAnchor from "react-scrollable-anchor";
 
 const Home = props => {
   return (
-    <span>
+    <>
       <Carousel />
       <ScrollableAnchor id={"search-section"}>
         <Search />
       </ScrollableAnchor>
       <Specials />
       <Categories />
-    </span>
+    </>
   );
 };
 

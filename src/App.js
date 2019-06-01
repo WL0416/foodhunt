@@ -17,14 +17,12 @@ class App extends Component {
         <Router>
           <div className="App">
             <Header branding="Food Hunt" />
-            <div className="container-fluid">
-              <Switch>
-                <Route exact path="/" component={Home} />
-                <Route exact path="venues" component={VenuesOverview} />
-                <Route exact path="/today" component={TodayOverview} />
-                <Route exact path="/addspecial" component={AddSpecial} />
-              </Switch>
-            </div>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="venues" component={VenuesOverview} />
+              <Route exact path="/today" component={TodayOverview} />
+              <Route exact path="/addspecial" component={AddSpecial} />
+            </Switch>
             <Footer />
           </div>
         </Router>
