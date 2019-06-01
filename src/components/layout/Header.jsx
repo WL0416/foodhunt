@@ -9,10 +9,10 @@ const Header = props => {
   return (
     <nav className="navbar navbar-expand-sm navbar-dark bg-danger mb-0 py-0">
       <div className="container">
-        <a href="/" className="navbar-brand">
+        <Link to="/" className="navbar-brand">
           <img src={logo} width="75" height="75" alt="" />
           {branding}
-        </a>
+        </Link>
 
         <div>
           <ul className="navbar-nav mr-auto">
