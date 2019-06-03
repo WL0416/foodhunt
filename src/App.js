@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Provider from "./context";
@@ -19,7 +19,7 @@ class App extends Component {
             <Header branding="Food Hunt" />
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route exact path="venues" component={VenuesOverview} />
+              <Route exact path="/venues" component={VenuesOverview} />
               <Route exact path="/today" component={TodayOverview} />
               <Route exact path="/addspecial" component={AddSpecial} />
             </Switch>
