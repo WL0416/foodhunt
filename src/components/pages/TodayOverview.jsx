@@ -10,7 +10,13 @@ class TodayOverview extends Component {
   }
 
   render() {
-    return <h1>Overview Page</h1>;
+    return (
+      <Container>
+        <Row>
+          <h1 />
+        </Row>
+      </Container>
+    );
   }
 }
 

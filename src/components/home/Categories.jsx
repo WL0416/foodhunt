@@ -35,7 +35,7 @@ class Categories extends Component {
     const types = [
       "Parma",
       "Pizza",
-      "Noddle",
+      "Noodle",
       "Steak",
       "Burger",
       "Pie",
