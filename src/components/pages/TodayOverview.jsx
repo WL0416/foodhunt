@@ -15,12 +15,9 @@ class TodayOverview extends Component {
             special => special.day.toLowerCase() === weekday.toLowerCase()
           );
 
-          console.log(todaySpecials);
-
           const todaySpecialCards = todaySpecials.map(special => (
-            <a className="overview-a" href="/">
+            <a key={special.id} className="overview-a" href="/">
               <MyCard
-                key={special.id}
                 img={image}
                 title={special.name}
                 text={special.descrip}
