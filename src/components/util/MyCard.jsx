@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import Card from "react-bootstrap";
+import { Card } from "react-bootstrap";
 
-class Card extends Component {
+class MyCard extends Component {
   render() {
     const { img, title, text, updateinfo } = this.props;
 
@@ -21,11 +21,11 @@ class Card extends Component {
   }
 }
 
-Card.propTypes = {
+MyCard.propTypes = {
   img: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   updateinfo: PropTypes.string.isRequired
 };
 
-export default Card;
+export default MyCard;

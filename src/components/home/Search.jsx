@@ -29,9 +29,7 @@ class SearchBox extends Component {
                         id="inputGroupSelect01"
                         className="h-100 custom-select"
                       >
-                        <option value="" selected>
-                          Any particular day?
-                        </option>
+                        <option defaultValue="">Any particular day?</option>
                         <option value="1">Monday</option>
                         <option value="2">Tuesday</option>
                         <option value="3">Wednesday</option>

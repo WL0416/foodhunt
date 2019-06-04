@@ -29,8 +29,8 @@ export default props => {
               width="100%"
               hight="auto"
               controls=""
-              autoplay="true"
-              loop="true"
+              autoPlay={true}
+              loop={true}
             >
               <source src={video} type="video/mp4" />
             </video>

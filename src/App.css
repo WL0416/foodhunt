@@ -36,3 +36,23 @@
 #_hj-f5b2a1eb-9b07_feedback_open_close_phone {
   background-color: #e76f51 !important;
 }
+
+.overview-a:link {
+  text-decoration: none;
+  color: black;
+}
+
+.overview-a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.overview-a:hover {
+  text-decoration: none;
+  color: #e76f51;
+}
+
+.overview-a:active {
+  text-decoration: none;
+  color: #e76f51;
+}

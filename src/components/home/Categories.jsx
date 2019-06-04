@@ -15,8 +15,9 @@ class Categories extends Component {
       "Saturday",
       "Sunday"
     ];
+
     const listWeekdays = weekdays.map(weekday => (
-      <Category category={weekday} quantity="0" />
+      <Category key={weekday} category={weekday} quantity={0} />
     ));
 
     const continents = [
@@ -28,8 +29,9 @@ class Categories extends Component {
       "South America",
       "Antarctica"
     ];
+
     const listContinents = continents.map(continent => (
-      <Category category={continent} quantity="0" />
+      <Category key={continent} category={continent} quantity={0} />
     ));
 
     const types = [
@@ -42,7 +44,7 @@ class Categories extends Component {
       "Fish and Chips"
     ];
     const listTypes = types.map(type => (
-      <Category category={type} quantity="0" />
+      <Category key={type} category={type} quantity={0} />
     ));
 
     return (
