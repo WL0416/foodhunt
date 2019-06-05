@@ -6,7 +6,18 @@ class Vendor extends Component {
   render() {
     const { specials } = this.props;
 
-    return <img src={img} alt="" />;
+    const specialsList = specials.map(special => (
+      <h1 key={special.id}>{special.name}</h1>
+    ));
+
+    console.log(specials);
+
+    return (
+      <>
+        <img src={img} alt="title" style={{ width: "100%" }} />
+        <Container>{specialsList}</Container>
+      </>
+    );
   }
 }
 

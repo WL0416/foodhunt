@@ -138,7 +138,7 @@ class AddSpecial extends Component {
                   <Form.Check
                     inline
                     type="checkbox"
-                    id={`${weekday}`}
+                    id={`${weekday}select`}
                     label={`${weekday}`}
                   />
                 ))}
