@@ -19,10 +19,19 @@ class App extends Component {
           {value => {
             const { specials } = value;
 
-            const vendors = {
-              TEW: "The Elephant & Wheelbarrow",
-              TP: "The Posty"
-            };
+            const vendorsRouter = specials.map(special => (
+              <Route
+                key={special.id}
+                exact
+                path={`/${special.vendor}`}
+                component={() => (
+                  <Vendor
+                    specials={specials.filter(special => special.vendor)}
+                    url={special.image}
+                  />
+                )}
+              />
+            ));
 
             return (
               <Router>
@@ -33,17 +42,7 @@ class App extends Component {
                     <Route exact path="/venues" component={VenuesList} />
                     <Route exact path="/today" component={TodayOverview} />
                     <Route exact path="/addspecial" component={AddSpecial} />
-                    <Route
-                      exact
-                      path={`/${vendors.TEW}`}
-                      component={() => (
-                        <Vendor
-                          specials={specials.filter(
-                            special => special.vendor === vendors.TEW
-                          )}
-                        />
-                      )}
-                    />
+                    {vendorsRouter}
                   </Switch>
                   <Footer />
                 </div>
