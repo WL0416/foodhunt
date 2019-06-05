@@ -8,7 +8,7 @@ class MyCard extends Component {
 
     return (
       <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src={require("../../vendors/" + img)} />
+        <Card.Img variant="top" src={require("../../images/vendors/" + img)} />
         <Card.Body>
           <Card.Title>{title}</Card.Title>
           <Card.Text>{text}</Card.Text>

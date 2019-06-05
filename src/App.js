@@ -8,7 +8,7 @@ import Footer from "./components/layout/Footer";
 import Home from "./components/pages/Home";
 import AddSpecial from "./components/pages/AddSpecial";
 import TodayOverview from "./components/pages/TodayOverview";
-import VenuesOverview from "./components/pages/VenuesOverview";
+import VenuesList from "./components/pages/VenuesList";
 
 class App extends Component {
   render() {
@@ -19,7 +19,7 @@ class App extends Component {
             <Header branding="Food Hunt" />
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route exact path="/venues" component={VenuesOverview} />
+              <Route exact path="/venues" component={VenuesList} />
               <Route exact path="/today" component={TodayOverview} />
               <Route exact path="/addspecial" component={AddSpecial} />
             </Switch>
