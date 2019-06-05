@@ -2,13 +2,6 @@ import React, { Component } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 
 class AddSpecial extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      specials: []
-    };
-  }
-
   render() {
     const weekdays = [
       "MONDAY",
@@ -40,6 +33,7 @@ class AddSpecial extends Component {
       "LUNCH SPECIALS",
       "BINGO"
     ];
+
     return (
       <Container>
         <Row>
@@ -134,13 +128,8 @@ class AddSpecial extends Component {
               <Form.Group controlId="formGroupWeekdays">
                 <Form.Label>WHICH DAY(S)</Form.Label>
                 <br />
-                {weekdays.map(weekday => (
-                  <Form.Check
-                    inline
-                    type="checkbox"
-                    id={`${weekday}select`}
-                    label={`${weekday}`}
-                  />
+                {weekdays.map(w => (
+                  <Form.Check inline type="checkbox" id={w} label={w} />
                 ))}
               </Form.Group>
             </Form>
