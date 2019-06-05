@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Container, Row, CardDeck } from "react-bootstrap";
 import { Consumer } from "../../context";
 import MyCard from "../util/MyCard";
-import image from "../../vendors/locanda-restaurant-bar.jpg";
 
 class TodayOverview extends Component {
   render() {
@@ -18,7 +17,7 @@ class TodayOverview extends Component {
           const todaySpecialCards = todaySpecials.map(special => (
             <a key={special.id} className="overview-a" href="/">
               <MyCard
-                img={image}
+                img={special.image}
                 title={special.name}
                 text={special.descrip}
                 updateinfo="Last update 1 min ago"

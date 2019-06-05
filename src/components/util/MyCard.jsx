@@ -7,8 +7,8 @@ class MyCard extends Component {
     const { img, title, text, updateinfo } = this.props;
 
     return (
-      <Card>
-        <Card.Img variant="top" src={img} />
+      <Card style={{ width: "18rem" }}>
+        <Card.Img variant="top" src={require("../../vendors/" + img)} />
         <Card.Body>
           <Card.Title>{title}</Card.Title>
           <Card.Text>{text}</Card.Text>
