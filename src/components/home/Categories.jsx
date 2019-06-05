@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { Consumer } from "../../context";
 import Category from "./Category";
 import "./Categories.css";
 
@@ -48,29 +47,22 @@ class Categories extends Component {
     ));
 
     return (
-      <Consumer>
-        {value => {
-          const { specials } = value;
-          return (
-            <Container>
-              <Row>
-                <Col className="cate-col">
-                  <h5 className="cate-title">Weekdays</h5>
-                  {listWeekdays}
-                </Col>
-                <Col className="cate-col">
-                  <h5 className="cate-title">Continents</h5>
-                  {listContinents}
-                </Col>
-                <Col className="cate-col">
-                  <h5 className="cate-title">Types</h5>
-                  {listTypes}
-                </Col>
-              </Row>
-            </Container>
-          );
-        }}
-      </Consumer>
+      <Container>
+        <Row>
+          <Col className="cate-col">
+            <h5 className="cate-title">Weekdays</h5>
+            {listWeekdays}
+          </Col>
+          <Col className="cate-col">
+            <h5 className="cate-title">Continents</h5>
+            {listContinents}
+          </Col>
+          <Col className="cate-col">
+            <h5 className="cate-title">Types</h5>
+            {listTypes}
+          </Col>
+        </Row>
+      </Container>
     );
   }
 }
