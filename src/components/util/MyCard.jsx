@@ -6,7 +6,7 @@ class MyCard extends Component {
   render() {
     const { img, title, text, updateinfo } = this.props;
 
-    const chunkText = text.match(new RegExp(".{1," + 80 + "}", "g"));
+    const chunkText = text.match(new RegExp(".{1," + 90 + "}", "g"));
 
     return (
       <Card style={{ width: "18rem" }}>
