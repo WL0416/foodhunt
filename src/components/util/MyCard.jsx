@@ -6,12 +6,14 @@ class MyCard extends Component {
   render() {
     const { img, title, text, updateinfo } = this.props;
 
+    const chunkText = text.match(new RegExp(".{1," + 80 + "}", "g"));
+
     return (
       <Card style={{ width: "18rem" }}>
         <Card.Img variant="top" src={require("../../images/vendors/" + img)} />
         <Card.Body>
           <Card.Title>{title}</Card.Title>
-          <Card.Text>{text}</Card.Text>
+          <Card.Text>{chunkText[0]}...</Card.Text>
         </Card.Body>
         <Card.Footer>
           <small className="text-muted">{updateinfo}</small>
