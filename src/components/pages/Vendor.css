@@ -1,6 +1,3 @@
-.vendor {
-}
-
 .vendor-banner {
   position: relative;
 }
@@ -10,7 +7,7 @@
   top: 55%;
   left: 10%;
   width: auto;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .vendor-address {
@@ -18,12 +15,25 @@
   top: 65%;
   left: 10%;
   width: auto;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
-.vendor-website-phone {
+.vendor-website {
   position: absolute;
-  top: 71%;
-  left: 9%;
-  background-color: rgba(255, 255, 255, 0.7);
+  top: 72.5%;
+  left: 10%;
+  color: #e76f51;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.vendor-phone {
+  position: absolute;
+  top: 72.5%;
+  left: 50%;
+  color: #e76f51;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.vendor-descrip {
+  margin-top: 5%;
 }
