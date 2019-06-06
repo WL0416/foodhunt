@@ -27,7 +27,7 @@ class App extends Component {
                 component={() => (
                   <Vendor
                     specials={specials.filter(special => special.vendor)}
-                    url={special.image}
+                    special={special}
                   />
                 )}
               />
