@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9685d042a8522b7680f0367a236d2330",
+    "revision": "74df61153f4411ce9c40b63f6b6f86fc",
     "url": "/foodhunt/index.html"
   },
   {
-    "revision": "b19014e8ac388628e9eb",
-    "url": "/foodhunt/static/css/2.4e5c3c81.chunk.css"
+    "revision": "5066607c6dac618a076e",
+    "url": "/foodhunt/static/css/2.03d9f874.chunk.css"
   },
   {
-    "revision": "39e8a477036d1e4feff3",
-    "url": "/foodhunt/static/css/main.24bb90d2.chunk.css"
+    "revision": "692f9fc61caae027ef9a",
+    "url": "/foodhunt/static/css/main.8b921620.chunk.css"
   },
   {
-    "revision": "b19014e8ac388628e9eb",
-    "url": "/foodhunt/static/js/2.332aaa63.chunk.js"
+    "revision": "5066607c6dac618a076e",
+    "url": "/foodhunt/static/js/2.b3988883.chunk.js"
   },
   {
-    "revision": "39e8a477036d1e4feff3",
-    "url": "/foodhunt/static/js/main.8e7eb6e9.chunk.js"
+    "revision": "692f9fc61caae027ef9a",
+    "url": "/foodhunt/static/js/main.ea29859e.chunk.js"
   },
   {
     "revision": "f35d8da0b5c86d0e9869",
@@ -176,12 +176,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/foodhunt/static/media/fa-solid-900.ff8d9f8a.ttf"
   },
   {
+    "revision": "d7b3c83f76bd5a8c4422a7f273e0bb72",
+    "url": "/foodhunt/static/media/locanda-restaurant-bar.d7b3c83f.jpg"
+  },
+  {
     "revision": "1dd10b1800e6389c0765ef182fb1d304",
     "url": "/foodhunt/static/media/logo.1dd10b18.png"
   },
   {
     "revision": "253eb6809fdeb52bbb99a78babf1415b",
     "url": "/foodhunt/static/media/slide1.253eb680.jpg"
+  },
+  {
+    "revision": "368d92ff5b02a85d34fc1dc89b705798",
+    "url": "/foodhunt/static/media/the-elephant-and-wheelbarrow-bourke-street-melbourne.368d92ff.jpg"
   },
   {
     "revision": "5a925580f4a244990e400c6ea6030e46",
