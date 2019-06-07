@@ -31,7 +31,15 @@ class Vendor extends Component {
           {address},{suburb},{postcode}
         </h3>
 
-        <h5 className="vendor-website">{website}</h5>
+        <h5 className="vendor-website">
+          <a
+            href={`http://${website}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {website}
+          </a>
+        </h5>
         <h5 className="vendor-phone">{phone}</h5>
         <h5 className="vendor-descrip">test test test</h5>
         {specialsList}
