@@ -14,7 +14,9 @@ const Home = props => {
       <ScrollableAnchor id={"search-section"}>
         <Search />
       </ScrollableAnchor>
-      <Specials />
+      <ScrollableAnchor id={"specials-section"}>
+        <Specials />
+      </ScrollableAnchor>
       <Categories />
     </>
   );

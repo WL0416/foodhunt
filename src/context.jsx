@@ -49,20 +49,24 @@ class Provider extends Component {
       return a.date - b.date;
     });
 
-    const specialsRate = specials.sort(function(a, b) {
-      return a.rate - b.rate;
-    });
+    const specialsRate = specials
+      .sort(function(a, b) {
+        return a.rate - b.rate;
+      })
+      .reverse()
+      .slice(0, 7);
 
     // get local time
     const now = new Date();
     const day = now
       .toLocaleDateString("default", { weekday: "long" })
-      .toUpperCase();
+      .toUpperCase()
+      .slice(0, 7);
 
     this.setState({
       specials: res.data,
       specialsDate: specialsDate,
-      specialsRate: specialsRate.reverse(),
+      specialsRate: specialsRate,
       weekday: day
     });
   }

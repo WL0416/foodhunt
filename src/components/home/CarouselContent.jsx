@@ -11,7 +11,7 @@ const CarouselContent = props => {
       <div className="row" style={{ paddingBottom: "13%" }}>
         <div className="col" />
         <div className="col">
-          <Button variant="success" size="lg" block>
+          <Button variant="success" size="lg" block href="#specials-section">
             Get Info
           </Button>
         </div>

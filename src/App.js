@@ -10,6 +10,7 @@ import AddSpecial from "./components/pages/AddSpecial";
 import TodayOverview from "./components/pages/TodayOverview";
 import VenuesList from "./components/pages/VenuesList";
 import Vendor from "./components/pages/Vendor";
+import { VerticleButton as ScrollUpButton } from "react-scroll-up-button";
 
 class App extends Component {
   render() {
@@ -44,6 +45,9 @@ class App extends Component {
                     <Route exact path="/addspecial" component={AddSpecial} />
                     {vendorsRouter}
                   </Switch>
+                  <ScrollUpButton
+                    style={{ backgroundColor: "rgb(221,97,66)" }}
+                  />
                   <Footer />
                 </div>
               </Router>
