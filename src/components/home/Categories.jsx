@@ -15,8 +15,8 @@ class Categories extends Component {
       "Sunday"
     ];
 
-    const listWeekdays = weekdays.map(weekday => (
-      <Category key={weekday} category={weekday} quantity={0} />
+    const listWeekdays = weekdays.map((weekday, index) => (
+      <Category key={index} category={weekday} quantity={0} />
     ));
 
     const continents = [
