@@ -45,9 +45,11 @@ class Provider extends Component {
 
     const specials = res.data;
 
-    const specialsDate = specials.sort(function(a, b) {
-      return a.date - b.date;
-    });
+    const specialsDate = specials
+      .sort(function(a, b) {
+        return a.date - b.date;
+      })
+      .slice(0, 7);
 
     const specialsRate = specials
       .sort(function(a, b) {
@@ -60,8 +62,7 @@ class Provider extends Component {
     const now = new Date();
     const day = now
       .toLocaleDateString("default", { weekday: "long" })
-      .toUpperCase()
-      .slice(0, 7);
+      .toUpperCase();
 
     this.setState({
       specials: res.data,
