@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { Consumer } from "../../context";
 import Category from "./Category";
 import "./Categories.css";
 
@@ -15,8 +14,9 @@ class Categories extends Component {
       "Saturday",
       "Sunday"
     ];
-    const listWeekdays = weekdays.map(weekday => (
-      <Category category={weekday} quantity="0" />
+
+    const listWeekdays = weekdays.map((weekday, index) => (
+      <Category key={index} category={weekday} quantity={0} />
     ));
 
     const continents = [
@@ -28,47 +28,41 @@ class Categories extends Component {
       "South America",
       "Antarctica"
     ];
+
     const listContinents = continents.map(continent => (
-      <Category category={continent} quantity="0" />
+      <Category key={continent} category={continent} quantity={0} />
     ));
 
     const types = [
       "Parma",
       "Pizza",
-      "Noddle",
+      "Noodle",
       "Steak",
       "Burger",
       "Pie",
       "Fish and Chips"
     ];
     const listTypes = types.map(type => (
-      <Category category={type} quantity="0" />
+      <Category key={type} category={type} quantity={0} />
     ));
 
     return (
-      <Consumer>
-        {value => {
-          const { specials } = value;
-          return (
-            <Container>
-              <Row>
-                <Col className="cate-col">
-                  <h5 className="cate-title">Weekdays</h5>
-                  {listWeekdays}
-                </Col>
-                <Col className="cate-col">
-                  <h5 className="cate-title">Continents</h5>
-                  {listContinents}
-                </Col>
-                <Col className="cate-col">
-                  <h5 className="cate-title">Types</h5>
-                  {listTypes}
-                </Col>
-              </Row>
-            </Container>
-          );
-        }}
-      </Consumer>
+      <Container>
+        <Row>
+          <Col className="cate-col">
+            <h5 className="cate-title">Weekdays</h5>
+            {listWeekdays}
+          </Col>
+          <Col className="cate-col">
+            <h5 className="cate-title">Continents</h5>
+            {listContinents}
+          </Col>
+          <Col className="cate-col">
+            <h5 className="cate-title">Types</h5>
+            {listTypes}
+          </Col>
+        </Row>
+      </Container>
     );
   }
 }

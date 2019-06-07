@@ -6,8 +6,9 @@ const Context = React.createContext();
 class Provider extends Component {
   state = {
     specials: [],
-    specialsPrice: [],
+    specialsDate: [],
     specialsRate: [],
+    weekday: "",
     weekinfo: {
       monday: 0,
       tuesday: 0,
@@ -16,6 +17,24 @@ class Provider extends Component {
       friday: 0,
       saturday: 0,
       sunday: 0
+    },
+    continentinfo: {
+      australia: 0,
+      asia: 0,
+      africa: 0,
+      europe: 0,
+      northamerica: 0,
+      southamerica: 0,
+      antarctica: 0
+    },
+    types: {
+      parma: 0,
+      pizza: 0,
+      noodle: 0,
+      steak: 0,
+      burger: 0,
+      pie: 0,
+      fishchips: 0
     }
   };
 
@@ -26,7 +45,7 @@ class Provider extends Component {
 
     const specials = res.data;
 
-    const specialsPrice = specials.sort(function(a, b) {
+    const specialsDate = specials.sort(function(a, b) {
       return a.date - b.date;
     });
 
@@ -34,10 +53,17 @@ class Provider extends Component {
       return a.rate - b.rate;
     });
 
+    // get local time
+    const now = new Date();
+    const day = now
+      .toLocaleDateString("default", { weekday: "long" })
+      .toUpperCase();
+
     this.setState({
       specials: res.data,
-      specialsPrice: specialsPrice,
-      specialsRate: specialsRate
+      specialsDate: specialsDate,
+      specialsRate: specialsRate.reverse(),
+      weekday: day
     });
   }
 

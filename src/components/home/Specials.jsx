@@ -5,31 +5,11 @@ import Special, { Rate } from "./Special";
 import { Consumer } from "../../context";
 
 class Specials extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      weekday: ""
-    };
-  }
-
-  componentDidMount() {
-    const now = new Date();
-    const day = now
-      .toLocaleDateString("default", { weekday: "long" })
-      .toUpperCase();
-
-    this.setState({
-      weekday: day
-    });
-  }
-
   render() {
-    const { weekday } = this.state;
-
     return (
       <Consumer>
         {value => {
-          const { specialsPrice, specialsRate } = value;
+          const { specialsDate, specialsRate, weekday } = value;
           return (
             <div className="rate-block">
               <Container>
@@ -39,7 +19,7 @@ class Specials extends Component {
                       <strong>RECENTLY ADDED {weekday} SPECIALS</strong>
                     </h5>
                     <List selection verticalAlign="middle">
-                      {specialsPrice.map(special => (
+                      {specialsDate.map(special => (
                         <Special key={special.id} special={special} />
                       ))}
                     </List>

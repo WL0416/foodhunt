@@ -13,7 +13,7 @@ const Category = props => {
 };
 
 Category.propTypes = {
-  weekday: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
   quantity: PropTypes.number.isRequired
 };
 
