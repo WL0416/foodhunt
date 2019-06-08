@@ -7,7 +7,10 @@ import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import Home from "./components/pages/Home";
 import AddSpecial from "./components/pages/AddSpecial";
-import TodayOverview from "./components/pages/TodayOverview";
+import TodayOverview, {
+  ContinentOverview,
+  TypesOverview
+} from "./components/pages/TodayOverview";
 import VenuesList from "./components/pages/VenuesList";
 import Vendor from "./components/pages/Vendor";
 import { VerticleButton as ScrollUpButton } from "react-scroll-up-button";
@@ -18,7 +21,7 @@ class App extends Component {
       <Provider>
         <Consumer>
           {value => {
-            const { specials, weekday, weekinfo } = value;
+            const { specials, weekday, weekinfo, continentinfo, types } = value;
 
             const vendorRouters = specials.map(special => (
               <Route
@@ -47,6 +50,33 @@ class App extends Component {
               )
             );
 
+            const continentRouters = Object.keys(continentinfo).map(
+              (continent, index) => (
+                <Route
+                  key={index}
+                  exact
+                  path={`/${continent}`}
+                  component={() => (
+                    <ContinentOverview
+                      specials={specials}
+                      continent={continent}
+                    />
+                  )}
+                />
+              )
+            );
+
+            const typeRouters = Object.keys(types).map((type, index) => (
+              <Route
+                key={index}
+                exact
+                path={`/${type}`}
+                component={() => (
+                  <TypesOverview specials={specials} type={type} />
+                )}
+              />
+            ));
+
             return (
               <Router>
                 <div className="App">
@@ -57,6 +87,8 @@ class App extends Component {
                     <Route exact path="/addspecial" component={AddSpecial} />
                     {weekdayRouters}
                     {vendorRouters}
+                    {continentRouters}
+                    {typeRouters}
                   </Switch>
                   <ScrollUpButton
                     style={{ backgroundColor: "rgb(221,97,66)" }}
