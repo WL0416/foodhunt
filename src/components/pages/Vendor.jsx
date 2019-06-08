@@ -3,6 +3,9 @@ import { Container, Image } from "react-bootstrap";
 import "./Vendor.css";
 
 class Vendor extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
   render() {
     const { specials } = this.props;
 

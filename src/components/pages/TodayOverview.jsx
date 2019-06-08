@@ -5,6 +5,10 @@ import { Link } from "react-router-dom";
 import MyCard from "../util/MyCard";
 
 class TodayOverview extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     return (
       <Consumer>

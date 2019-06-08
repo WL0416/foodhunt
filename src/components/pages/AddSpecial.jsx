@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 
 class AddSpecial extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     const weekdays = [
       "MONDAY",
