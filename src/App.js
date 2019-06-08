@@ -18,9 +18,9 @@ class App extends Component {
       <Provider>
         <Consumer>
           {value => {
-            const { specials, weekday } = value;
+            const { specials, weekday, weekinfo } = value;
 
-            const routers = specials.map(special => (
+            const vendorRouters = specials.map(special => (
               <Route
                 key={special.id}
                 exact
@@ -34,22 +34,29 @@ class App extends Component {
               />
             ));
 
+            const weekdayRouters = Object.keys(weekinfo).map(
+              (weekday, index) => (
+                <Route
+                  key={index}
+                  exact
+                  path={`/${weekday}`}
+                  component={() => (
+                    <TodayOverview specials={specials} weekday={weekday} />
+                  )}
+                />
+              )
+            );
+
             return (
               <Router>
                 <div className="App">
-                  <Header branding="Food Hunt" />
+                  <Header branding="Food Hunt" weekday={weekday} />
                   <Switch>
                     <Route exact path="/" component={Home} />
                     <Route exact path="/venues" component={VenuesList} />
-                    <Route
-                      exact
-                      path="/today"
-                      component={() => (
-                        <TodayOverview specials={specials} weekday={weekday} />
-                      )}
-                    />
                     <Route exact path="/addspecial" component={AddSpecial} />
-                    {routers}
+                    {weekdayRouters}
+                    {vendorRouters}
                   </Switch>
                   <ScrollUpButton
                     style={{ backgroundColor: "rgb(221,97,66)" }}

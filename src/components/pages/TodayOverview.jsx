@@ -30,11 +30,11 @@ class TodayOverview extends Component {
       <Container>
         <br />
         <Row>
-          <h1>{weekday} Specials</h1>
+          <h1>{weekday.toUpperCase()} Specials</h1>
         </Row>
         <Row>
           <br />
-          <p>The best {weekday} eats and specials</p>
+          <p>The best {weekday.toUpperCase()} eats and specials</p>
         </Row>
         <Row>
           <CardDeck>{todaySpecialCards}</CardDeck>

@@ -9,41 +9,20 @@ class Provider extends Component {
     specialsDate: [],
     specialsRate: [],
     weekday: "",
-    weekinfo: {
-      monday: 0,
-      tuesday: 0,
-      wednesday: 0,
-      thursday: 0,
-      friday: 0,
-      saturday: 0,
-      sunday: 0
-    },
-    continentinfo: {
-      australia: 0,
-      asia: 0,
-      africa: 0,
-      europe: 0,
-      northamerica: 0,
-      southamerica: 0,
-      antarctica: 0
-    },
-    types: {
-      parma: 0,
-      pizza: 0,
-      noodle: 0,
-      steak: 0,
-      burger: 0,
-      pie: 0,
-      fishchips: 0
-    }
+    weekinfo: {},
+    continentinfo: {},
+    types: {}
   };
 
   async componentDidMount() {
     const res = await axios.get(
-      "https://my-json-server.typicode.com/wl0416/JSONapi/specials/"
+      "https://my-json-server.typicode.com/wl0416/JSONapi/db/"
     );
 
-    const specials = res.data;
+    const specials = res.data.specials;
+    const weekinfo = res.data.quantity.weekdays;
+    const continentinfo = res.data.quantity.continents;
+    const types = res.data.quantity.types;
 
     const specialsDate = specials
       .sort(function(a, b) {
@@ -62,13 +41,16 @@ class Provider extends Component {
     const now = new Date();
     const day = now
       .toLocaleDateString("default", { weekday: "long" })
-      .toUpperCase();
+      .toLowerCase();
 
     this.setState({
-      specials: res.data,
+      specials: specials,
       specialsDate: specialsDate,
       specialsRate: specialsRate,
-      weekday: day
+      weekday: day,
+      weekinfo: weekinfo,
+      continentinfo: continentinfo,
+      types: types
     });
   }
 

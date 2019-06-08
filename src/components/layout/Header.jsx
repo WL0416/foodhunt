@@ -5,7 +5,7 @@ import "./Header.css";
 import logo from "../../images/logo.png";
 
 const Header = props => {
-  const { branding } = props;
+  const { branding, weekday } = props;
   return (
     <nav
       className="navbar navbar-expand-sm navbar-dark bg-danger mb-0 py-0 sticky-top"
@@ -21,7 +21,7 @@ const Header = props => {
         <div>
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
-              <Link to="/today" className="nav-link">
+              <Link to={`/${weekday}`} className="nav-link">
                 TODAY
               </Link>
             </li>
