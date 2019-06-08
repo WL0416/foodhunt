@@ -18,7 +18,7 @@ class App extends Component {
       <Provider>
         <Consumer>
           {value => {
-            const { specials, specialsDate, specialsRate, weekday } = value;
+            const { specials, weekday } = value;
 
             const routers = specials.map(special => (
               <Route
