@@ -18,9 +18,9 @@ class App extends Component {
       <Provider>
         <Consumer>
           {value => {
-            const { specials } = value;
+            const { specials, specialsDate, specialsRate, weekday } = value;
 
-            const vendorsRouter = specials.map(special => (
+            const routers = specials.map(special => (
               <Route
                 key={special.id}
                 exact
@@ -41,9 +41,15 @@ class App extends Component {
                   <Switch>
                     <Route exact path="/" component={Home} />
                     <Route exact path="/venues" component={VenuesList} />
-                    <Route exact path="/today" component={TodayOverview} />
+                    <Route
+                      exact
+                      path="/today"
+                      component={() => (
+                        <TodayOverview specials={specials} weekday={weekday} />
+                      )}
+                    />
                     <Route exact path="/addspecial" component={AddSpecial} />
-                    {vendorsRouter}
+                    {routers}
                   </Switch>
                   <ScrollUpButton
                     style={{ backgroundColor: "rgb(221,97,66)" }}
