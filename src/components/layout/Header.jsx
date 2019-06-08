@@ -7,7 +7,11 @@ import logo from "../../images/logo.png";
 const Header = props => {
   const { branding } = props;
   return (
-    <nav className="navbar navbar-expand-sm navbar-dark bg-danger mb-0 py-0">
+    <nav
+      className="navbar navbar-expand-sm navbar-dark bg-danger mb-0 py-0 sticky-top"
+      data-spy="affix"
+      data-offset-top="50"
+    >
       <div className="container">
         <Link to="/" className="navbar-brand">
           <img src={logo} width="75" height="75" alt="" />
