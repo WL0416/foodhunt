@@ -9,7 +9,7 @@ class MyCard extends Component {
     const chunkText = text.match(new RegExp(".{1," + 90 + "}", "g"));
 
     return (
-      <Card style={{ width: "18rem" }}>
+      <Card style={{ width: "22rem" }}>
         <Card.Img variant="top" src={require("../../images/vendors/" + img)} />
         <Card.Body>
           <Card.Title>{title}</Card.Title>
