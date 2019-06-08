@@ -96,6 +96,7 @@ class VenuesList extends Component {
 
     return (
       <Container>
+        <br />
         <Row className="venues-row">
           <h1>Pubs and restaurants in Melbourne</h1>
         </Row>
