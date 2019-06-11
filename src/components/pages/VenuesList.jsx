@@ -93,7 +93,7 @@ class VenuesList extends Component {
 
     const venuesList = venues.map((venue, index) => (
       <Row key={index} className="venues-row">
-        {venue}
+        <strong> {venue} </strong>
       </Row>
     ));
 
