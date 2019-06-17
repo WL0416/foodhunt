@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import { Button } from "react-bootstrap";
 import "./Header.css";
 import logo from "../../images/logo.png";
 
@@ -22,22 +23,22 @@ const Header = props => {
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
               <Link to={`/${weekday}`} className="nav-link">
-                TODAY
+                <Button variant="danger">TODAY</Button>
               </Link>
             </li>
             <li className="nav-item">
               <Link to="/venues" className="nav-link">
-                VENUES
+                <Button variant="danger">VENUES</Button>
               </Link>
             </li>
             <li className="nav-item">
               <Link to="/addspecial" className="nav-link">
-                ADD SPECIAL
+                <Button variant="danger"> ADD SPECIAL</Button>
               </Link>
             </li>
             <li className="nav-item">
               <Link to="/" className="nav-link">
-                NEARBY NOW
+                <Button variant="success">ORDER NOW</Button>
               </Link>
             </li>
           </ul>
