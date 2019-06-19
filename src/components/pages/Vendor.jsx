@@ -29,11 +29,9 @@ class Vendor extends Component {
       <Container className="vendor">
         <Image src={img} alt="title" style={{ width: "100%" }} />
         <h1 className="vendor-title">{vendor}</h1>
-
         <h3 className="vendor-address">
           {address},{suburb},{postcode}
         </h3>
-
         <h5 className="vendor-website">
           <a
             href={`http://${website}`}
