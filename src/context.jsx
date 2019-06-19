@@ -11,7 +11,8 @@ class Provider extends Component {
     weekday: "",
     weekinfo: {},
     continentinfo: {},
-    types: {}
+    types: {},
+    venues: {}
   };
 
   async componentDidMount() {
@@ -23,6 +24,7 @@ class Provider extends Component {
     const weekinfo = res.data.quantity.weekdays;
     const continentinfo = res.data.quantity.continents;
     const types = res.data.quantity.types;
+    const venues = res.data.venues;
 
     const specialsDate = specials
       .sort(function(a, b) {
@@ -50,7 +52,8 @@ class Provider extends Component {
       weekday: day,
       weekinfo: weekinfo,
       continentinfo: continentinfo,
-      types: types
+      types: types,
+      venues: venues
     });
   }
 

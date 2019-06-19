@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import { Container, Row } from "react-bootstrap";
 import "./VenuesList.css";
 
@@ -7,93 +8,15 @@ class VenuesList extends Component {
     window.scrollTo(0, 0);
   }
   render() {
-    const venues = [
-      "Abbortsford",
-      "Albert Park",
-      "Ascot Vale",
-      "Balaclava",
-      "Bentleigh East",
-      "Berwick",
-      "Blackburn",
-      "Boronia",
-      "Box Hill",
-      "Brighton",
-      "Brighton Beach",
-      "Brunswick",
-      "Brunswick East",
-      "Brunswick West",
-      "Camberwell",
-      "Carlton",
-      "Carlton North",
-      "Carnegie",
-      "Caulfield",
-      "Clayton",
-      "Clifton Hill",
-      "Coburg",
-      "Collingwood",
-      "Dandenong",
-      "Docklands",
-      "Elsternwick",
-      "Elwood",
-      "Essendon",
-      "Essendon North",
-      "Fitzroy",
-      "Fitzroy North",
-      "Flemington",
-      "Footscray",
-      "Geelong",
-      "Harrow",
-      "Hawthorn",
-      "Hawthorn East",
-      "Kew",
-      "Lilydale",
-      "Malven",
-      "Malvern East",
-      "Maribyrnong",
-      "McKinnon",
-      "Melbourne CBD",
-      "Menton",
-      "Middle Park",
-      "Moonee Ponds",
-      "Moorabbin",
-      "Mornington",
-      "Mulgrave",
-      "Newport",
-      "North Carlton",
-      "North Melbourne",
-      "Northcote",
-      "Notting Hill",
-      "Parkville",
-      "Point Cook",
-      "Port Melbourne",
-      "Prahran",
-      "Preston",
-      "Reservior",
-      "Richmond",
-      "Ringwood",
-      "Sandringham",
-      "Seddon",
-      "South Melbourne",
-      "South Wharf",
-      "South Yarra",
-      "Southbank",
-      "Spotswood",
-      "St Kilda",
-      "St Kilda East",
-      "Sunbury",
-      "Thornbury",
-      "Toorak",
-      "Tullamarine",
-      "Warrandyte",
-      "Wesr Melbourne",
-      "Williamstown",
-      "Windsor",
-      "Yarraville"
-    ];
+    const { venues } = this.props;
 
-    const venuesList = venues.map((venue, index) => (
+    const venueNames = Object.keys(venues);
+
+    const venuesList = venueNames.map((venue, index) => (
       <Row key={index} className="venues-row">
-        <strong> {venue} </strong>
+        <strong>
+          {venue}:{venues[index]}
+        </strong>
       </Row>
     ));
 
@@ -108,5 +31,9 @@ class VenuesList extends Component {
     );
   }
 }
+
+VenuesList.propTypes = {
+  venues: PropTypes.object.isRequired
+};
 
 export default VenuesList;

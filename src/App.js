@@ -21,7 +21,14 @@ class App extends Component {
       <Provider>
         <Consumer>
           {value => {
-            const { specials, weekday, weekinfo, continentinfo, types } = value;
+            const {
+              specials,
+              weekday,
+              weekinfo,
+              continentinfo,
+              types,
+              venues
+            } = value;
 
             const vendorRouters = specials.map(special => (
               <Route
@@ -83,7 +90,11 @@ class App extends Component {
                   <Header branding="Food Hunt" weekday={weekday} />
                   <Switch>
                     <Route exact path="/" component={Home} />
-                    <Route exact path="/venues" component={VenuesList} />
+                    <Route
+                      exact
+                      path="/venues"
+                      component={() => <VenuesList venues={venues} />}
+                    />
                     <Route exact path="/addspecial" component={AddSpecial} />
                     {weekdayRouters}
                     {vendorRouters}
