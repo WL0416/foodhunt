@@ -6,6 +6,7 @@ class Vendor extends Component {
   componentDidMount() {
     window.scrollTo(0, 0);
   }
+
   render() {
     const { specials } = this.props;
 
@@ -21,9 +22,46 @@ class Vendor extends Component {
 
     const img = require("../../images/vendors/" + image);
 
-    const specialsList = specials.map(special => (
-      <p key={special.id}>{special.name}</p>
-    ));
+    const vendorSpecials = specials.filter(
+      special => special.vendor === vendor
+    );
+
+    const monday = vendorSpecials.filter(special => special.day === "Monday");
+    const tuesday = vendorSpecials.filter(special => special.day === "Tuesday");
+    const wednesday = vendorSpecials.filter(
+      special => special.day === "Wednesday"
+    );
+    const thursday = vendorSpecials.filter(
+      special => special.day === "Thursday"
+    );
+    const friday = vendorSpecials.filter(special => special.day === "Friday");
+    const saturday = vendorSpecials.filter(
+      special => special.day === "Saturday"
+    );
+    const sunday = vendorSpecials.filter(special => special.day === "Sunday");
+
+    const availableSpecials = [
+      monday,
+      tuesday,
+      wednesday,
+      thursday,
+      friday,
+      saturday,
+      sunday
+    ].filter(eachDay => eachDay.length > 0);
+
+    const daysList = availableSpecials.map(eachDay => [].push(eachDay[0].day));
+
+    const specialsList = availableSpecials.map(eachDay =>
+      eachDay.map(special => (
+        <>
+          <h4>
+            <strong>{daysList.index}</strong>
+          </h4>
+          <p>{special.name} </p>
+        </>
+      ))
+    );
 
     return (
       <Container className="vendor">
@@ -42,7 +80,10 @@ class Vendor extends Component {
           </a>
         </h5>
         <h5 className="vendor-phone">{phone}</h5>
-        <h5 className="vendor-descrip">test test test</h5>
+        <h2 className="vendor-descrip">
+          <strong>Specials at {vendor}</strong>
+        </h2>
+        <br />
         {specialsList}
       </Container>
     );
