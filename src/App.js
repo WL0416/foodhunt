@@ -39,6 +39,7 @@ class App extends Component {
                   <Vendor
                     specials={specials.filter(special => special.vendor)}
                     special={special}
+                    weekday={weekday}
                   />
                 )}
               />

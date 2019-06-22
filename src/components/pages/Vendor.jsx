@@ -8,7 +8,7 @@ class Vendor extends Component {
   }
 
   render() {
-    const { specials } = this.props;
+    const { specials, weekday } = this.props;
 
     const {
       image,
@@ -56,6 +56,22 @@ class Vendor extends Component {
 
     const specialsList = availableSpecials.map((eachDay, index) =>
       eachDay.map((special, index) => {
+        let ifButtonAvailable = false;
+
+        if (special.day.toLowerCase() === weekday) ifButtonAvailable = true;
+
+        let button = (
+          <Button variant="success" block>
+            Book Now
+          </Button>
+        );
+        if (!ifButtonAvailable)
+          button = (
+            <Button variant="dark" block disabled>
+              Book Now
+            </Button>
+          );
+
         if (index === 0)
           return (
             <>
@@ -68,7 +84,7 @@ class Vendor extends Component {
                 <Card.Header>{special.name}</Card.Header>
                 <Card.Body>
                   <Card.Text>{special.descrip}</Card.Text>
-                  <Button variant="success">Book Now</Button>
+                  {button}
                 </Card.Body>
               </Card>
               <br />
@@ -81,7 +97,7 @@ class Vendor extends Component {
                 <Card.Header>{special.name}</Card.Header>
                 <Card.Body>
                   <Card.Text> {special.descrip}</Card.Text>
-                  <Button variant="success">Book Now</Button>
+                  {button}
                 </Card.Body>
               </Card>
               <br />
