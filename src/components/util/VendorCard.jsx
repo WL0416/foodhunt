@@ -61,6 +61,7 @@ class VendorCard extends Component {
           onHide={this.handleHide}
           dialogClassName="modal-90w"
           aria-labelledby="example"
+          centered="true"
         >
           <Modal.Header id="popupTitle">
             <Modal.Title id="example">
@@ -116,6 +117,7 @@ class VendorCard extends Component {
           onHide={this.handleResultHide}
           dialogClassName="modal-90w"
           aria-labelledby="example"
+          centered="true"
         >
           <Modal.Header id="popupTitle">
             <Modal.Title id="example">
