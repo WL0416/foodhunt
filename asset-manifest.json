@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/foodhunt/static/css/main.e8cec988.chunk.css",
-    "main.js": "/foodhunt/static/js/main.6e3c553b.chunk.js",
-    "main.js.map": "/foodhunt/static/js/main.6e3c553b.chunk.js.map",
+    "main.js": "/foodhunt/static/js/main.bdf039dd.chunk.js",
+    "main.js.map": "/foodhunt/static/js/main.bdf039dd.chunk.js.map",
     "runtime~main.js": "/foodhunt/static/js/runtime~main.887cda07.js",
     "runtime~main.js.map": "/foodhunt/static/js/runtime~main.887cda07.js.map",
     "static/css/2.4e5c3c81.chunk.css": "/foodhunt/static/css/2.4e5c3c81.chunk.css",
     "static/js/2.43998a78.chunk.js": "/foodhunt/static/js/2.43998a78.chunk.js",
     "static/js/2.43998a78.chunk.js.map": "/foodhunt/static/js/2.43998a78.chunk.js.map",
     "index.html": "/foodhunt/index.html",
-    "precache-manifest.f99e5e9963fa88bb6927a7d50db1c818.js": "/foodhunt/precache-manifest.f99e5e9963fa88bb6927a7d50db1c818.js",
+    "precache-manifest.bc65d8c751156e149296f48ee2fddf6f.js": "/foodhunt/precache-manifest.bc65d8c751156e149296f48ee2fddf6f.js",
     "service-worker.js": "/foodhunt/service-worker.js",
     "static/css/2.4e5c3c81.chunk.css.map": "/foodhunt/static/css/2.4e5c3c81.chunk.css.map",
     "static/css/main.e8cec988.chunk.css.map": "/foodhunt/static/css/main.e8cec988.chunk.css.map",
