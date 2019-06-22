@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Image } from "react-bootstrap";
+import { Container, Image, Card, Button } from "react-bootstrap";
 import "./Vendor.css";
 
 class Vendor extends Component {
@@ -52,15 +52,42 @@ class Vendor extends Component {
 
     const daysList = availableSpecials.map(eachDay => [].push(eachDay[0].day));
 
-    const specialsList = availableSpecials.map(eachDay =>
-      eachDay.map(special => (
-        <>
-          <h4>
-            <strong>{daysList.index}</strong>
-          </h4>
-          <p>{special.name} </p>
-        </>
-      ))
+    console.log(daysList);
+
+    const specialsList = availableSpecials.map((eachDay, index) =>
+      eachDay.map((special, index) => {
+        if (index === 0)
+          return (
+            <>
+              <br />
+              <h4>
+                <strong>{special.day}</strong>
+              </h4>
+              <br />
+              <Card>
+                <Card.Header>{special.name}</Card.Header>
+                <Card.Body>
+                  <Card.Text>{special.descrip}</Card.Text>
+                  <Button variant="success">Book Now</Button>
+                </Card.Body>
+              </Card>
+              <br />
+            </>
+          );
+        else
+          return (
+            <>
+              <Card>
+                <Card.Header>{special.name}</Card.Header>
+                <Card.Body>
+                  <Card.Text> {special.descrip}</Card.Text>
+                  <Button variant="success">Book Now</Button>
+                </Card.Body>
+              </Card>
+              <br />
+            </>
+          );
+      })
     );
 
     return (
