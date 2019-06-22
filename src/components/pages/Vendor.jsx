@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { Container, Image, Card, Button } from "react-bootstrap";
+import { Container, Image } from "react-bootstrap";
+import VendorCard from "../util/VendorCard";
 import "./Vendor.css";
 
 class Vendor extends Component {
@@ -50,27 +51,11 @@ class Vendor extends Component {
       sunday
     ].filter(eachDay => eachDay.length > 0);
 
-    const daysList = availableSpecials.map(eachDay => [].push(eachDay[0].day));
-
-    console.log(daysList);
-
     const specialsList = availableSpecials.map((eachDay, index) =>
       eachDay.map((special, index) => {
         let ifButtonAvailable = false;
 
         if (special.day.toLowerCase() === weekday) ifButtonAvailable = true;
-
-        let button = (
-          <Button variant="success" block>
-            Book Now
-          </Button>
-        );
-        if (!ifButtonAvailable)
-          button = (
-            <Button variant="dark" block disabled>
-              Book Now
-            </Button>
-          );
 
         if (index === 0)
           return (
@@ -80,26 +65,20 @@ class Vendor extends Component {
                 <strong>{special.day}</strong>
               </h4>
               <br />
-              <Card>
-                <Card.Header>{special.name}</Card.Header>
-                <Card.Body>
-                  <Card.Text>{special.descrip}</Card.Text>
-                  {button}
-                </Card.Body>
-              </Card>
+              <VendorCard
+                ifButtonAvailable={ifButtonAvailable}
+                special={special}
+              />
               <br />
             </>
           );
         else
           return (
             <>
-              <Card>
-                <Card.Header>{special.name}</Card.Header>
-                <Card.Body>
-                  <Card.Text> {special.descrip}</Card.Text>
-                  {button}
-                </Card.Body>
-              </Card>
+              <VendorCard
+                ifButtonAvailable={ifButtonAvailable}
+                special={special}
+              />
               <br />
             </>
           );
