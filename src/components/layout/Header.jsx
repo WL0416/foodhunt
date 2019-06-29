@@ -37,7 +37,7 @@ const Header = props => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/" className="nav-link">
+              <Link to={`/${weekday}`} className="nav-link">
                 <Button variant="success">ORDER NOW</Button>
               </Link>
             </li>
