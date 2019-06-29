@@ -35,7 +35,7 @@ class VendorCard extends Component {
 
     let button = (
       <Button variant="success" block onClick={this.handleShow}>
-        Book Now
+        Order Now
       </Button>
     );
 
