@@ -42,7 +42,7 @@ class VendorCard extends Component {
     if (!ifButtonAvailable) {
       button = (
         <Button variant="dark" block disabled>
-          Book Now
+          Order Now
         </Button>
       );
     }
@@ -65,7 +65,7 @@ class VendorCard extends Component {
         >
           <Modal.Header id="popupTitle">
             <Modal.Title id="example">
-              Book {special.name} at {special.vendor}
+              Order {special.name} at {special.vendor}
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>
@@ -121,7 +121,7 @@ class VendorCard extends Component {
         >
           <Modal.Header id="popupTitle">
             <Modal.Title id="example">
-              Book {special.name} at {special.vendor}
+              Order {special.name} at {special.vendor}
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>
