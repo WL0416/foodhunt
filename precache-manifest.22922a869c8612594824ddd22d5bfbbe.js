@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "25a8c049b1da11c2d14cfe33b3575da0",
+    "revision": "4a1b2adaa9a5e0c68d26a5c049dd8ff4",
     "url": "/foodhunt/index.html"
   },
   {
-    "revision": "70f6bc384a89e9e001a2",
+    "revision": "3c1a56a56c57b5497886",
     "url": "/foodhunt/static/css/2.4e5c3c81.chunk.css"
   },
   {
-    "revision": "57c33f24a4d71ccb2b07",
-    "url": "/foodhunt/static/css/main.2c5ad8c8.chunk.css"
+    "revision": "cd9a45679bc1dc04411a",
+    "url": "/foodhunt/static/css/main.23e14666.chunk.css"
   },
   {
-    "revision": "70f6bc384a89e9e001a2",
-    "url": "/foodhunt/static/js/2.1e0080a2.chunk.js"
+    "revision": "3c1a56a56c57b5497886",
+    "url": "/foodhunt/static/js/2.8beaed4e.chunk.js"
   },
   {
-    "revision": "57c33f24a4d71ccb2b07",
-    "url": "/foodhunt/static/js/main.c9724b4c.chunk.js"
+    "revision": "cd9a45679bc1dc04411a",
+    "url": "/foodhunt/static/js/main.37722df9.chunk.js"
   },
   {
     "revision": "f35d8da0b5c86d0e9869",
@@ -184,6 +184,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/foodhunt/static/media/logo.1dd10b18.png"
   },
   {
+    "revision": "9eb93dadc097281d03b35cae3a300017",
+    "url": "/foodhunt/static/media/post-office-hotel-richmond.9eb93dad.jpg"
+  },
+  {
     "revision": "243f8a7f245d00a9903ccc242caed3b9",
     "url": "/foodhunt/static/media/preston-hotel-preston.243f8a7f.jpg"
   },
@@ -192,8 +196,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/foodhunt/static/media/slide1.253eb680.jpg"
   },
   {
+    "revision": "4a20be831b2dca1f262c1b1307533e7d",
+    "url": "/foodhunt/static/media/the-collection-richmond.4a20be83.jpg"
+  },
+  {
     "revision": "368d92ff5b02a85d34fc1dc89b705798",
     "url": "/foodhunt/static/media/the-elephant-and-wheelbarrow-bourke-street-melbourne.368d92ff.jpg"
+  },
+  {
+    "revision": "415f7a4ad8a7fae681653bb67d1eab8c",
+    "url": "/foodhunt/static/media/the-hawthorn-hotel-hawthorn.415f7a4a.jpg"
   },
   {
     "revision": "2da813116b0ed3b1ca63ab3fd59b2335",
