@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6ba5cff8036e65d7ec19c74d7cb0a3a5",
+    "revision": "25a8c049b1da11c2d14cfe33b3575da0",
     "url": "/foodhunt/index.html"
   },
   {
-    "revision": "e427570a57d2f36d0d16",
+    "revision": "70f6bc384a89e9e001a2",
     "url": "/foodhunt/static/css/2.4e5c3c81.chunk.css"
   },
   {
-    "revision": "1b878aee6b1294ec9b73",
-    "url": "/foodhunt/static/css/main.e8cec988.chunk.css"
+    "revision": "57c33f24a4d71ccb2b07",
+    "url": "/foodhunt/static/css/main.2c5ad8c8.chunk.css"
   },
   {
-    "revision": "e427570a57d2f36d0d16",
-    "url": "/foodhunt/static/js/2.43998a78.chunk.js"
+    "revision": "70f6bc384a89e9e001a2",
+    "url": "/foodhunt/static/js/2.1e0080a2.chunk.js"
   },
   {
-    "revision": "1b878aee6b1294ec9b73",
-    "url": "/foodhunt/static/js/main.a2fc8873.chunk.js"
+    "revision": "57c33f24a4d71ccb2b07",
+    "url": "/foodhunt/static/js/main.c9724b4c.chunk.js"
   },
   {
     "revision": "f35d8da0b5c86d0e9869",
@@ -184,12 +184,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/foodhunt/static/media/logo.1dd10b18.png"
   },
   {
+    "revision": "243f8a7f245d00a9903ccc242caed3b9",
+    "url": "/foodhunt/static/media/preston-hotel-preston.243f8a7f.jpg"
+  },
+  {
     "revision": "253eb6809fdeb52bbb99a78babf1415b",
     "url": "/foodhunt/static/media/slide1.253eb680.jpg"
   },
   {
     "revision": "368d92ff5b02a85d34fc1dc89b705798",
     "url": "/foodhunt/static/media/the-elephant-and-wheelbarrow-bourke-street-melbourne.368d92ff.jpg"
+  },
+  {
+    "revision": "2da813116b0ed3b1ca63ab3fd59b2335",
+    "url": "/foodhunt/static/media/the-penny-black-brunswick.2da81311.jpg"
   },
   {
     "revision": "5a925580f4a244990e400c6ea6030e46",
