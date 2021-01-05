@@ -5,7 +5,7 @@
   "homepage": "https://wl0416.github.io/foodhunt",
   "dependencies": {
     "@material-ui/core": "^4.0.0-rc.0",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "bootstrap": "^4.3.1",
     "classnames": "^2.2.6",
     "gh-pages": "^2.0.1",
